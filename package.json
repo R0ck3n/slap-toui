@@ -1,0 +1,18 @@
+{
+    "name": "slap-touit",
+    "version": "1.0.0",
+    "description": "Slogan : \" dont forget to slap idiots \"",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass ./src/scss/style.scss ./src/css/style.css --watch --style compressed"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.cefim-formation.org/NGracia/slap-touit.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.69.5"
+    }
+}

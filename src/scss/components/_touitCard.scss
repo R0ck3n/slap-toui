@@ -1,0 +1,192 @@
+.card-touit{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 1rem;
+    background-color: $midle-card-bg;
+    margin: 0 auto 3rem auto;
+    width: 90%;
+    border-radius: 2rem;
+    .touit {
+        display: flex;
+        gap: 1rem;
+        color: #fff;
+        >div:nth-child(2){
+            flex: 1 0;
+        }
+        .touiter-avatar img {
+            max-width: 75px;
+        }
+        .touit-autor {
+            display: flex;
+            gap: 0.5rem;
+            padding-left: 0.5rem;
+            max-width: 40vw;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background-color: $grey-text;
+                border-radius: 15px;
+                padding-block: 5px;
+            }
+    
+            &::-webkit-scrollbar-track {
+                background-color: $grey-text;
+            }
+    
+            /* Décalage de la scrollbar vers la gauche */
+            &::-webkit-scrollbar-thumb {
+                transform: translateX(-50px);
+            }
+
+            a {
+                color: #fff;
+
+            }
+            .touit-splitted-elem {
+                display: flex;
+                justify-content: space-between;
+                flex: 1 0;
+                div {
+                    display: flex;
+                    gap: 1rem;
+                    p {
+                        color: $grey-text;
+                        &:first-child {
+                            padding-left: 1rem;
+                        }
+                    }
+                    a {
+                        display: flex;
+                        color: $grey-text;
+                    }
+                }
+                button {
+                    border: none;
+                    color: $grey-text;
+                    background-color: transparent;
+                    margin-top: -6px;
+                }
+            }
+        }
+
+        .touit-text-content {
+            padding: 1rem 0.5rem;
+            overflow-wrap: anywhere;
+
+        }
+
+        .touit-text-content::-webkit-scrollbar {
+            width: 6px;
+            height: 5px;
+        }
+
+        .touit-text-content::-webkit-scrollbar-thumb {
+            background-color: $grey-text;
+            border-radius: 15px;
+            padding-block: 5px;
+        }
+
+        .touit-text-content::-webkit-scrollbar-track {
+            background-color: $grey-text;
+        }
+
+        .touit-img {
+            width: 550px;
+            height: 680px;
+            border-radius: 15px;
+            border: 1px solid #ffffff21;
+            @media (max-width: 1576px) {
+                width: auto;
+                height: auto;
+            }
+        }
+        .react-container {
+            gap: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            .single-emote-container {
+                position: relative;
+                background-color: transparent;
+                border: none;
+                .single-emote-count {
+                    top: 2rem;
+                    left: 2.5rem;
+                    position: absolute;
+                    font-size: 1.5rem;
+                    color: $grey-text;
+                }
+            }
+        }
+        .touit-actions {
+            display: grid;
+            grid-template-columns: 60% 40%;
+
+            .touit-principal-action,
+            .touit-secondary-action {
+                display: flex;
+                justify-content: space-between;
+                padding-block: 1rem;
+                .single-action-container {
+                    background-color: transparent;
+                    border: none;
+                    position: relative;
+                    padding: 0.5rem;
+                    .single-action-count {
+                        top: 3.5rem;
+                        right: 13px;
+                        position: absolute;
+                        font-size: 1.7rem;
+                        color: $grey-text;
+                    }
+                    .add-tumbs {
+                        position: absolute;
+                        bottom: .8rem;
+                        left: 4rem;
+                        display: none;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        background-color: $bg-card;
+                        border: 1px solid $grey-text;
+                        border-radius: 15px;
+                        padding: 2rem;
+                        z-index: 1000;
+                        .tumbs-pics-container {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+                            margin-top: 4rem;
+                            svg {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                        }
+                    }
+                    .active {
+                        display: flex;
+                    }
+                }
+
+                svg {
+                    fill: $grey-text;
+                    height: 25px;
+                    width: 25px;
+                    cursor: pointer;
+                    &:hover {
+                        fill: $orange-hover;
+                    }
+                }
+            }
+            .touit-secondary-action {
+                justify-content: end;
+                gap: 20px;
+            }
+        }
+    }
+}

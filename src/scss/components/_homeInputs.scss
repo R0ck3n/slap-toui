@@ -1,0 +1,119 @@
+.send-touit-form {
+        width: 55rem;
+        padding-block: 3rem;
+        background-color: $midle-card-bg;
+        margin: 3rem auto;
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        .home-midle-inputs {
+            display: grid;
+            grid-template-columns: 16rem 30rem;
+            gap: 2rem;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 1rem;
+            #pseudo,
+            #touit {
+                color: #fff;
+                border: 1px solid #ffffff8a;
+                border-radius: 5px;
+                padding-inline: 1rem;
+                background-color: transparent;
+            }
+            #pseudo {
+                width: 16rem;
+            }
+            #touit {
+                border: none;
+                outline: none;
+                width: 30rem;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                right: 4rem;
+                width: 30rem;
+                border-bottom: 1px solid #ffffff88;
+            }
+        }
+        .home-touit-options {
+            display: grid;
+            grid-template-columns: 19rem 12rem;
+            justify-content: end;
+            margin-right: 4rem;
+            div:first-child {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: $grey-text;
+                    &:hover {
+                        fill: $orange-hover;
+                        cursor: pointer;
+                    }
+                }
+            }
+            #add-emote-touit-input {
+                position: relative;
+            }
+            #home-send-touit {
+                @include btn($btn-orange, $btn-darkorange, 100%);
+            }
+            .send-touit-emote-panel-container {
+                display: none;
+                top: 2.5rem;
+                right: 0;
+                padding: 0.5rem 2rem;
+                position: absolute;
+                background-color: $bg-card;
+                border: 1px solid $grey-text;
+                border-radius: 15px;
+                z-index: 2;
+
+                .emote-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 18rem;
+                    overflow-y: auto;
+                    height: 15rem;
+                    margin-right: 0.7rem;
+                    margin-top: 1rem;
+                    &::-webkit-scrollbar {
+                        width: 6px;
+                        height: 5px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $grey-text;
+                        border-radius: 15px;
+                        padding-block: 5px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: $grey-text;
+                    }
+
+                    /* Décalage de la scrollbar vers la gauche */
+                    &::-webkit-scrollbar-thumb {
+                        transform: translateX(-50px);
+                    }
+
+                    .addEmote-btn {
+                        border-radius: 10px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #ffffff25;
+                        }
+                    }
+                }
+            }
+            .active-input-panel {
+                display: block;
+            }
+        }
+    }
+

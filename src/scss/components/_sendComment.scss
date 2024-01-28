@@ -1,0 +1,98 @@
+.touit-comment{
+    height: 0;
+    flex-direction: column;
+    display: flex;
+    align-items: end;
+    .close-comment-zone{
+        height: 0;
+        opacity: 0;
+        background-color: transparent;
+        border: none;
+        color: $grey-text;
+        text-align: right;
+    }
+    .comment-container{
+        max-height: 40rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $grey-text;
+            border-radius: 15px;
+            padding-block: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: $grey-text;
+        }
+
+        /* Décalage de la scrollbar vers la gauche */
+        &::-webkit-scrollbar-thumb {
+            transform: translateX(-50px);
+        }
+        .single-comment {
+            background-color: $grey-text;
+            border-radius: .5rem;
+            padding: .5rem;
+            color:#000;
+            width: 97%;
+            .singleCommentAutor{
+                text-align: right;
+                &::before{
+                    content: '@';
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+    .send-comment-form {
+        margin-top: 2rem;
+        border-radius: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        height: 0px;
+        opacity: 0;
+        transition: .3s;
+        input {
+            color: #fff;
+            border: 1px solid #ffffff8a;
+            border-radius: 5px;
+            padding-inline: 1rem;
+            background-color: transparent;  
+            outline: none;
+            flex: 1;
+            width: 100%;
+            &:focus,
+            &:active{
+                background-color: transparent;  
+            }
+        }
+        .touit-comment-text{
+            margin-left: 1rem;
+        }
+            
+        button {
+            margin-top: 2rem;
+            grid-column: 2;
+            justify-self: end;
+            @include btn($btn-orange, $btn-darkorange, auto);
+        }
+    }
+
+    .accordeon-active{
+        height: auto ;
+        opacity: 1;
+    }
+    
+}
+.touit-comment-active{
+    height: auto ;
+}

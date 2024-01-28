@@ -1,0 +1,25 @@
+@mixin card-btn($color1: #d69533, $color2: #bc812a) {
+    grid-column: 2;
+    border-radius: 20px;
+    background-color: $color1;
+    transition: 0.3s;
+    padding: 0.5rem 2rem;
+    &:hover {
+        background-color: $color2;
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 6px 12px -2px,
+            rgba(255, 255, 255, 0.3) 0px 3px 7px -3px;
+    }
+}
+
+@mixin btn($color1, $color2, $width) {
+    border-radius: 20px;
+    background-color: $color1;
+    transition: 0.3s;
+    padding: 0.5rem 2rem;
+    width: $width;
+    &:hover {
+        background-color: $color2;
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 6px 12px -2px,
+            rgba(255, 255, 255, 0.3) 0px 3px 7px -3px;
+    }
+}

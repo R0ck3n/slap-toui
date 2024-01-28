@@ -1,0 +1,40 @@
+.home-card-container {
+    gap: 2rem;
+    width: 90%;
+    padding: 2rem;
+    display: grid;
+    margin: 5rem auto 0 auto;
+    background-color: $bg-card;
+    border-radius: 20px;
+    font-size: 1.6rem;
+
+    .card-btn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        button {
+            @include card-btn($btn-orange, $btn-darkorange);
+        }
+    }
+    .card-txt {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 1rem;
+    }
+    .card-rank {
+        display: grid;
+        grid-template-columns: 10% 50%;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .card-img {
+        border-radius: 50%;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+    }
+}

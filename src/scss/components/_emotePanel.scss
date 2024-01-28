@@ -1,0 +1,53 @@
+.emote-panel-container {
+    display: none;
+    bottom: .8rem;
+    right: 0;
+    padding: 0.5rem 2rem;
+    position: absolute;
+    background-color: $bg-card;
+    border: 1px solid $grey-text;
+    border-radius: 15px;
+    z-index: 2;
+    .emote-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 18rem;
+        overflow-y: auto;
+        height: 15rem;
+        margin-right: 0.7rem;
+        margin-top: 1rem;
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $grey-text;
+            border-radius: 15px;
+            padding-block: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: $grey-text;
+        }
+
+        /* Décalage de la scrollbar vers la gauche */
+        &::-webkit-scrollbar-thumb {
+            transform: translateX(-50px);
+        }
+
+        .addEmote-btn {
+            background-color: transparent;
+            border: none;
+            width: 4rem;
+            border-radius: 10px;
+            padding-top: 4px;
+            &:hover {
+                background-color: #ffffff25;
+            }
+        }
+    }
+}
+.active-panel {
+    display: block;
+}
