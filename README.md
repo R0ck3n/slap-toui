@@ -23,9 +23,6 @@ For this session, you are simply required to have an HTML & CSS web page ready t
     -   Child elements will be displayed in chronological order (most recent at the beginning).
     -   Each tweet should display the message and the username of its author.
 
-## Wireframe
-
-https://www.figma.com/file/ULkNIagWj6A1AidUFEiFai/Slap-touit?type=design&node-id=0-1&mode=design&t=IL3TJwR9iZsSNLyj-0
 
 ## Going Further
 
