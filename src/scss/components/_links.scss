@@ -39,10 +39,59 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .link-bloc {
+        height: 0;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        transition: 0.3s;
+    }
+
+    .burger {
+        border: 1px solid white;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 140px;
+        right: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        div {
+            width: 70%;
+            height: 1px;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+    }
+}
+
 .link-bloc .selected {
     background-color: rgb(255, 255, 255);
     color: #000000;
     svg {
         fill: #000000;
+    }
+}
+
+.active-burger {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.active-burger-btn {
+    justify-content: center;
+    div:first-child {
+        transform: rotate(45deg);
+    }
+    div:nth-child(2) {
+        display: none;
+    }
+    div:last-child {
+        transform: rotate(-45deg);
     }
 }

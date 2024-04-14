@@ -26,6 +26,27 @@ body .global-container {
 .right-container {
     max-height: 100vh;
     overflow-y: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 1500px) {
+    .right-container {
+        display: none;
+    }
+    body .global-container {
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .right-container {
+        display: none;
+    }
+    body .global-container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
 }
 
 .touit-container {
@@ -72,4 +93,3 @@ body .global-container {
     background-color: transparent;
 }
 /*Fin des params pour la scroll barre*/
-

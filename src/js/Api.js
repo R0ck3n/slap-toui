@@ -1,5 +1,7 @@
+import config from "../../config.js";
+
 export class Api {
-    url = "url de l'api";
+    url = config.API_URL;
 
     /**
      * Envoi un touit a l'api pour l'enregistrer

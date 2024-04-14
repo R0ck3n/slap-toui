@@ -4,3 +4,15 @@
         margin: auto;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 200px;
+            margin: auto;
+        }
+    }
+}
